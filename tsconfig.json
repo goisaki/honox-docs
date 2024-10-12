@@ -22,6 +22,16 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+
+    "types": [
+      "vite/client",
+      "@cloudflare/workers-types"
+    ],
+    "jsxImportSource": "hono/jsx"
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
