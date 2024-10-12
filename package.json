@@ -6,13 +6,16 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "wrangler pages dev",
-    "deploy": "bun run build && wrangler pages deploy"
+    "deploy": "bun run build && wrangler pages deploy",
+    "format": "biome format --write",
+    "lint": "biome lint --write"
   },
   "dependencies": {
     "hono": "^4.6.4",
     "honox": "^0.1.26"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
     "@cloudflare/workers-types": "^4.20241011.0",
     "@hono/vite-build": "^1.1.0",
     "@hono/vite-dev-server": "^0.16.0",
