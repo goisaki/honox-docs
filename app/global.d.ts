@@ -1,15 +1,21 @@
 import {} from 'hono'
 
 type Head = {
-  title?: string
+	title?: string
 }
 
 declare module 'hono' {
-  interface Env {
-    Variables: {}
-    Bindings: {}
-  }
-  interface ContextRenderer {
-    (content: string | Promise<string>, head?: Head): Response | Promise<Response>
-  }
+	interface Env {
+		// biome-ignore lint/complexity/noBannedTypes:
+		Variables: {}
+		// biome-ignore lint/complexity/noBannedTypes:
+		Bindings: {}
+	}
+	interface ContextRenderer {
+		// biome-ignore lint/style/useShorthandFunctionType:
+		(
+			content: string | Promise<string>,
+			head?: Head
+		): Response | Promise<Response>
+	}
 }
