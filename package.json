@@ -19,6 +19,7 @@
     "@cloudflare/workers-types": "^4.20241011.0",
     "@hono/vite-build": "^1.1.0",
     "@hono/vite-dev-server": "^0.16.0",
+    "@mdx-js/rollup": "^3.0.1",
     "@types/bun": "latest",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
