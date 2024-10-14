@@ -12,7 +12,22 @@ export default jsxRenderer(({ children, title }) => {
 				<Link rel='stylesheet' href='/app/styles/tailwind.css' />
 				<Script src='/app/client.ts' async />
 			</head>
-			<body>{children}</body>
+			<body>
+				<div class='mx-auto max-w-[90rem] items-center px-4 sm:px-6 md:px-8'>
+					<nav class='fixed top-0 mx-4 my-8 hidden h-svh w-80 lg:block'>
+						<span class='font-bold text-xl'>HonoX Docs</span>
+					</nav>
+					<div class='lg:ml-[21rem] xl:mr-[21rem]'>
+						<div class='prose mx-auto max-w-3xl px-4 py-8 xl:max-w-none'>
+							{children}
+						</div>
+					</div>
+					{/* 43rem = 45rem (90rem / 2) - 2rem (`md:px-8`) */}
+					<nav class='fixed top-0 right-[max(2rem,_calc(50%_-_43rem))] mx-4 my-4 hidden h-[calc(100vh_-_3rem)] w-80 rounded-r-2xl border p-4 xl:block'>
+						<span class='font-semibold text-gray-400 text-sm uppercase'>On this page</span>
+					</nav>
+				</div>
+			</body>
 		</html>
 	)
 })
