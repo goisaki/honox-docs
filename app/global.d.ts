@@ -1,7 +1,9 @@
 import {} from 'hono'
+import type { Heading } from '../rehype/toc'
 
 type Head = {
-	title?: string
+	title?: string,
+	headings?: Heading[]
 }
 
 declare module 'hono' {
